@@ -11,3 +11,8 @@ print(array_a[1, 2])
 print(array_a[1, :])
 print(array_a[:, 2])
 print(array_a[0:2, 1:])
+
+array_b = np.array([15, 42, 8, 73, 23, 56, 91, 4, 38, 67])
+print(array_b[array_b > 40])
+print(array_b[array_b % 2 == 0])
+print(array_b[(array_b > 20) & (array_b < 70)])
