@@ -6,3 +6,11 @@ class CheckingAccount(BankAccount):
             print("Warning: insufficient funds!")
         else:
             self.balance -= fee
+
+acc = CheckingAccount("Filip")
+acc.deposit(200)
+acc.charge_fee(15)
+print(acc.get_balance())  # 185.0
+
+acc.charge_fee(200)  # Warning: insufficient funds!
+print(acc.get_balance())  # Still 185.0
